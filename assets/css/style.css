@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+header {
+    background-color: #333;
+}
+.header {
+    display: flex;
+    margin: auto;
+    max-width: 1140px;
+    margin:auto;
+    
+}
+
+.header img {
+    margin-left: 20px;
+    width: 56px;
+    height: auto;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1140px;
+    margin: auto;
+    align-items: center;
+}
+.banner {
+    flex: 1;
+    
+}
+
+.banner img {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.titulo {
+    flex: 1;
+    margin: auto;
+    
+}
+
+.titulo h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.sortear {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sortear p{
+    margin-top:30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.sortear button {
+    font-size: 30px;
+    margin-top: 50px;
+    padding: 5px 20px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid gray;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.sortear button:hover {
+    background-color: gray;
+    border: 2px solid #333;
+}
+
+#resultado--area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+#textoresultado {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#resultado {
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.anuncio {
+   max-width: 1140px;
+   margin: auto;
+}
+.anuncio img {
+    max-width: 100%;
+}
+
+
+footer {
+    margin-top: -4px;
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
