@@ -22,11 +22,16 @@ function sortearLoto(){
         background.style.padding = "20px";
     } 
 
-    let resultado = loto.join(' - ');
+    let resultado = document.querySelector(".resultado");
+    resultado.innerHTML = '';
+    for(let i = 0; i < loto.length; i++){
+        let numberDiv = document.createElement('div');
+        numberDiv.textContent = loto[i];
+        numberDiv.className = 'number';
+        resultado.appendChild(numberDiv);
+    }
     document.querySelector(".textoresultado").innerHTML = texto;
-    document.querySelector(".resultado").innerHTML=resultado;
-    document.querySelector(".button").textContent=button;
-
+    document.querySelector(".button").textContent = button;
 }
 
 function sortearMega(){
@@ -52,9 +57,18 @@ function sortearMega(){
             background.style.padding = "20px";
         } 
     
-    let resultado = loto.join(' - ');
+    let resultado = document.querySelector(".resultado");
+    resultado.innerHTML = '';
+    for(let i = 0; i < loto.length; i++){
+        let numberDiv = document.createElement('div');
+        numberDiv.textContent = loto[i];
+        numberDiv.className = 'number';
+        resultado.appendChild(numberDiv);
+    }
     document.querySelector(".textoresultado").innerHTML = texto;
-    document.querySelector(".resultado").innerHTML=resultado;
-    document.querySelector(".button").textContent=button;
-    
+    document.querySelector(".button").textContent = button;
 }
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.menu-content').classList.toggle('open');
+});

@@ -37,8 +37,11 @@ header {
 .menu {
     align-items: center;
     display: flex;
-    gap: 20px;
+}
+
+.menu-content {
     padding: 0.6rem;
+    gap: 20px;
 }
 
 .menu__link{
@@ -141,13 +144,25 @@ header {
 .resultado div {
     width: 30px;
     height: 30px;
-    border-radius: 50%; /* Faz cada div ser um círculo */
     background-color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
     font-weight: bold;
+}
+
+.number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Faz cada div ser um círculo */
+    background-color: var(--color-font-hover);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-weight: bold;
+    border: 2px solid var(--color-primary); /* Adiciona uma borda */
 }
 /*
 .anuncio {
@@ -161,11 +176,49 @@ header {
 
 footer {
     /*margin-top: -4px; */
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: var(--color-primary);
     color: #fff;
-    padding: 1.2em;
+    padding: 1.2em 0;
     text-align: center;
+}
+
+@media (max-width: 678px) {
+    .resultado{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: space-between;
+    }
+    .hamburger {
+        margin-right: 1em;
+        display: block; /* Mostra o botão do menu hambúrguer */
+    }
+
+    .menu-content {
+        display: none; /* Esconde os links do menu */
+        flex-direction: column; /* Organiza os links do menu em uma coluna */
+    }
+
+    .menu-content.open {
+        top: 100%;
+        display: flex; /* Mostra os links do menu quando o menu está aberto */
+    }
+}
+
+/* Estilos para telas com largura maior que 600px */
+@media (min-width: 601px) {
+    .hamburger {
+        display: none; /* Esconde o botão do menu hambúrguer */
+    }
+
+    .menu-content {
+        display: flex; /* Mostra os links do menu */
+    }
 }
