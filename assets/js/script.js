@@ -22,12 +22,12 @@ function sortearLoto(){
         background.style.padding = "20px";
     } 
 
-    let resultado = document.querySelector(".resultado");
+    let resultado = document.querySelector(".resultadoLotofacil");
     resultado.innerHTML = '';
     for(let i = 0; i < loto.length; i++){
         let numberDiv = document.createElement('div');
         numberDiv.textContent = loto[i];
-        numberDiv.className = 'number';
+        numberDiv.className = 'numberLotofacil';
         resultado.appendChild(numberDiv);
     }
     document.querySelector(".textoresultado").innerHTML = texto;
@@ -57,12 +57,12 @@ function sortearMega(){
             background.style.padding = "20px";
         } 
     
-    let resultado = document.querySelector(".resultado");
+    let resultado = document.querySelector(".resultadoMega");
     resultado.innerHTML = '';
     for(let i = 0; i < loto.length; i++){
         let numberDiv = document.createElement('div');
         numberDiv.textContent = loto[i];
-        numberDiv.className = 'number';
+        numberDiv.className = 'numberMega';
         resultado.appendChild(numberDiv);
     }
     document.querySelector(".textoresultado").innerHTML = texto;

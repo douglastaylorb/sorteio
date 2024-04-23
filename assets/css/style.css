@@ -6,6 +6,8 @@
     --color-font-menu: #fff;
     --color-font-hover: gray;
     --color-resultado: rgba(197, 197, 197, 0.103);
+    --color-megasena: #01ac66;
+    --color-lotofacil: #7f3992;
 }
 
 * {
@@ -141,10 +143,11 @@ header {
     
 }
 
-.resultado div {
+.resultadoMega div {
     width: 30px;
     height: 30px;
-    background-color: #ccc;
+    background-color: var(--color-megasena);
+    color: var(--color-font-menu);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,17 +155,45 @@ header {
     font-weight: bold;
 }
 
-.number {
+.resultadoLotofacil div {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-lotofacil);
+    color: var(--color-font-menu);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.numberLotofacil {
+    padding: 7px;
     width: 30px;
     height: 30px;
     border-radius: 50%; /* Faz cada div ser um círculo */
-    background-color: var(--color-font-hover);
+    background-color: var(--color-lotofacil);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+  /*   border: 2px solid var(--color-primary); Adiciona uma borda */
+}
+
+.numberMega {
+    padding: 7px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Faz cada div ser um círculo */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
     font-weight: bold;
-    border: 2px solid var(--color-primary); /* Adiciona uma borda */
+  /*   border: 2px solid var(--color-primary); Adiciona uma borda */
 }
 /*
 .anuncio {
@@ -185,14 +216,14 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 678px) {
+@media (max-width: 791px) {
     .resultado{
         flex-wrap: wrap;
         justify-content: center;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 690px) {
     header {
         justify-content: space-between;
     }
@@ -208,12 +239,14 @@ footer {
 
     .menu-content.open {
         top: 100%;
-        display: flex; /* Mostra os links do menu quando o menu está aberto */
+        display: flex;
     }
+    
+
 }
 
 /* Estilos para telas com largura maior que 600px */
-@media (min-width: 601px) {
+@media (min-width: 690px) {
     .hamburger {
         display: none; /* Esconde o botão do menu hambúrguer */
     }
@@ -221,4 +254,6 @@ footer {
     .menu-content {
         display: flex; /* Mostra os links do menu */
     }
+
+   
 }
